@@ -1,6 +1,5 @@
-from rest_framework.serializers import ModelSerializer, SerializerMethodField
+from rest_framework.serializers import ModelSerializer
 from .models import Image
-from PIL import Image as ImagePIL
 
 
 class ImageSerializer(ModelSerializer):
@@ -8,6 +7,6 @@ class ImageSerializer(ModelSerializer):
 
     class Meta:
         model = Image
-        fields = ['id', 'image', 'thumb_image_1']
-        read_only_fields = ['id', 'thumb_image_1']
+        fields = ['id', 'image', 'thumb_image_1', 'thumb_image_2']
+        read_only_fields = ['id', 'thumb_image_1', 'thumb_image_2']
         extra_kwargs = {'image': {'required': 'True'}}

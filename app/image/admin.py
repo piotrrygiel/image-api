@@ -39,7 +39,8 @@ class UserAdmin(BaseUserAdmin):
 
 
 class ImageAdmin(admin.ModelAdmin):
-    list_display = ['id', 'image', 'thumb_image_1']
+    """Define the admin pages for images."""
+    list_display = ['id', 'image', 'thumb_image_1', 'thumb_image_2']
 
 
 admin.site.register(User, UserAdmin)
