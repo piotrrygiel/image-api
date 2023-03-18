@@ -39,7 +39,7 @@ class UserAdmin(BaseUserAdmin):
 
 
 class ImageAdmin(admin.ModelAdmin):
-    list_display = ['id', 'image']
+    list_display = ['id', 'image', 'thumb_image_1']
 
 
 admin.site.register(User, UserAdmin)
